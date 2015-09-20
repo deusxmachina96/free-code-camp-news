@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fccNewsApp">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Angular.js 1.4.6 -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+
+  <body>
+
+  	<header>
+  		<h1>FreeCodeCamp News</h1>
+  	</header>
+
+  	<div class="container">
+  		<div id="news-list" class="col-lg-12">
+	  		<ul ng-controller="NewsListCtrl">
+	  			<li class="news-wrapper" ng-repeat="newsItem in newsArray">
+	  				<span>{{newsItem.headline}}</span>
+	  				<span>{{newsItem.rank}} upvotes</span>
+	  				<span><a ng-href="{{newsItem.link}}">Link</a></span>
+	  			</li>
+	  		</ul>
+  		</div>
+  	</div>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>
