@@ -21,12 +21,21 @@
   	</header>
 
   	<div class="container">
-  		<div id="news-list" class="col-lg-12">
-	  		<ul ng-controller="NewsListCtrl">
+  		<div class="col-lg-12">
+	  		<ul id="news-list" ng-controller="NewsListCtrl">
 	  			<li class="news-wrapper" ng-repeat="newsItem in newsArray">
-	  				<span>{{newsItem.headline}}</span>
-	  				<span>{{newsItem.rank}} upvotes</span>
-	  				<span><a ng-href="{{newsItem.link}}">Link</a></span>
+            <div class="row">
+              <div class="col-lg-4 author-pic" ng-if="newsItem.image == ''">
+                 <img ng-src="{{newsItem.author.picture}}">
+              </div>
+              <div class="col-lg-4 author-pic" ng-if="newsItem.image != ''">
+                <img ng-src="{{newsItem.image}}">
+              </div>
+              <div class="col-lg-8 news-content">
+                <span><a ng-href="{{newsItem.link}}">{{newsItem.headline}}</a></span>
+                <span>{{newsItem.rank}} upvotes</span>
+              </div>
+            </div>
 	  			</li>
 	  		</ul>
   		</div>

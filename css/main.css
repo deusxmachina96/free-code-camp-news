@@ -6,4 +6,18 @@ header {
     margin-bottom: 20px;
     text-align: center; }
 
+#news-list {
+  list-style-type: none; }
+
+.author-pic {
+  height: 100px; }
+  .author-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px; }
+
+.news-wrapper {
+  margin-bottom: 20px;
+  border: 1px solid black; }
+
 /*# sourceMappingURL=main.css.map */
