@@ -1,6 +1,6 @@
 (function complete(){
 
-	var app = angular.module("fccNewsApp", []);
+	var app = angular.module("fccNewsApp", ['filters']);
 
 	app.controller("NewsListCtrl", ["$scope", "$http", function($scope, $http){
 		$scope.newsArray = [];

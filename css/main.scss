@@ -3,11 +3,13 @@
 header{
 	
 	width: 100%;
+	margin-bottom: 100px;
 
 	h1 {
 		margin-top: 20px;
 		margin-bottom: 20px;
 		text-align: center;
+		font-size: 3em;
 	}
 
 }
@@ -28,5 +30,21 @@ header{
 
 .news-wrapper {
 	margin-bottom: 20px;
-	border: 1px solid black;
+	border-bottom: 1px solid grey;
+	&:hover {
+		box-shadow: 0px 2px 5px 2px grey;
+	}
+}
+
+.news-title {
+	display: block;
+	font-size: 1.5em;
+	a {
+		color: #5E5E5E;
+		text-decoration: none;
+	}
+}
+
+.upvote-count {
+	margin-top: 10px;
 }
