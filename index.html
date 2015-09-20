@@ -34,6 +34,7 @@
               </div>
               <div class="col-lg-10 news-content">
                 <span class="news-title"><a ng-href="{{newsItem.link}}">{{newsItem.headline}}</a></span>
+                <span class="news-time">{{newsItem.timePosted | timeago}}</span>
                 <span class="upvote-count">{{newsItem.rank | pluralize}}</span>
               </div>
             </div>
