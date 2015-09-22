@@ -1,4 +1,10 @@
 @import url(../bower_components/bootstrap/dist/css/bootstrap.css);
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 10px; } }
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 14px; } }
 header {
   width: 100%;
   margin-bottom: 100px; }

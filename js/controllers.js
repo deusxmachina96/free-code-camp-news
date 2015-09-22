@@ -12,6 +12,7 @@
 
 			}, function(response) {
 				// Called when a server returns an error
+				console.log("error");
 
 			});
 

@@ -22,17 +22,17 @@
   	</header>
 
   	<div class="container">
-  		<div class="col-lg-10 col-lg-offset-1">
+  		<div class="col-lg-10 col-lg-offset-1 col-xs-12">
 	  		<ul id="news-list" ng-controller="NewsListCtrl">
 	  			<li class="news-wrapper" ng-repeat="newsItem in newsArray">
             <div class="row">
-              <div class="col-lg-2 author-pic" ng-if="newsItem.image == ''">
-                 <img ng-src="{{newsItem.author.picture}}" alt="Image not found">
+              <div class="col-lg-2 col-xs-2 author-pic" ng-if="newsItem.image == ''">
+                 <a ng-href="{{newsItem.link}}"><img ng-src="{{newsItem.author.picture}}" alt="Image not found"></a>
               </div>
-              <div class="col-lg-2 author-pic" ng-if="newsItem.image != ''">
-                <img ng-src="{{newsItem.image}}" alt="Image not found">
+              <div class="col-lg-2 col-xs-2 author-pic" ng-if="newsItem.image != ''">
+                <a ng-href="{{newsItem.link}}"><img ng-src="{{newsItem.image}}" alt="Image not found"></a>
               </div>
-              <div class="col-lg-10 news-content">
+              <div class="col-lg-10 col-xs-10 news-content">
                 <span class="news-title"><a ng-href="{{newsItem.link}}">{{newsItem.headline}}</a></span>
                 <span class="news-time">{{newsItem.timePosted | timeago}}</span>
                 <div class="users-info">
