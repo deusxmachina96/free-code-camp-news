@@ -1,11 +1,10 @@
 @import "../bower_components/bootstrap/dist/css/bootstrap.css";
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
     body{font-size: 10px;}
-}
-
-@media screen and (max-width: 360px) {
-    body{font-size: 10px;}
+    .news-discus {
+    	margin-left: -25px;
+    }
 }
 
 header{
@@ -24,14 +23,21 @@ header{
 
 #news-list {
 	list-style-type: none;
+	margin-left: -30px;	
 }
 
 .author-pic {
-	height: 100px;
 	img {
 		width: 100px;
 		height: 100px;
 		border-radius: 50px;
+	}
+	@media screen and(max-width: 375px) {
+	  img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+		}
 	}
 }
 
@@ -42,6 +48,7 @@ header{
 	&:hover {
 		box-shadow: 0px 2px 5px 2px grey;
 	}
+	height: 100px;
 }
 
 .news-title {
@@ -54,15 +61,12 @@ header{
 }
 
 .upvote-count {
-	margin-top: 10px;
-}
-
-.users-info {
-	position: absolute;
-	top: 70%;
-	right: 5%;
+	margin-left: 10px;
 }
 
 .news-discus {
-	margin-left: 10px;
+	margin-top: 50px;
+	@media screen and (max-width: 375px) {
+		margin-left: -25px;
+	}
 }

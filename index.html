@@ -21,29 +21,31 @@
   		<h1>FreeCodeCamp News</h1>
   	</header>
 
-  	<div class="container">
-  		<div class="col-lg-10 col-lg-offset-1 col-xs-12">
-	  		<ul id="news-list" ng-controller="NewsListCtrl">
-	  			<li class="news-wrapper" ng-repeat="newsItem in newsArray">
-            <div class="row">
-              <div class="col-lg-2 col-xs-2 author-pic" ng-if="newsItem.image == ''">
-                 <a ng-href="{{newsItem.link}}"><img ng-src="{{newsItem.author.picture}}" alt="Image not found"></a>
-              </div>
-              <div class="col-lg-2 col-xs-2 author-pic" ng-if="newsItem.image != ''">
-                <a ng-href="{{newsItem.link}}"><img ng-src="{{newsItem.image}}" alt="Image not found"></a>
-              </div>
-              <div class="col-lg-10 col-xs-10 news-content">
-                <span class="news-title"><a ng-href="{{newsItem.link}}">{{newsItem.headline}}</a></span>
-                <span class="news-time">{{newsItem.timePosted | timeago}}</span>
-                <div class="users-info">
+  	<div class="container-fluid">
+      <div class="row">
+    		<div class="col-lg-8 col-lg-offset-2 col-xs-12">
+  	  		<ul id="news-list" ng-controller="NewsListCtrl">
+  	  			<li class="news-wrapper" ng-repeat="newsItem in newsArray">
+              <div class="row">
+                <div class="col-lg-2 col-xs-2 author-pic" ng-if="newsItem.image == ''">
+                   <a ng-href="{{newsItem.link}}"><img ng-src="{{newsItem.author.picture}}" alt="Image not found"></a>
+                </div>
+                <div class="col-lg-2 col-xs-2 author-pic" ng-if="newsItem.image != ''">
+                  <a ng-href="{{newsItem.link}}"><img ng-src="{{newsItem.image}}" alt="Image not found"></a>
+                </div>
+                <div class="col-lg-8 col-xs-8 news-content">
+                  <span class="news-title"><a ng-href="{{newsItem.link}}">{{newsItem.headline}}</a></span>
+                  <span class="news-time">{{newsItem.timePosted | timeago}}</span>
                   <span class="upvote-count">{{newsItem.rank | pluralize}}</span>
-                  <span class="news-discus"><a class="btn btn-primary" ng-href="{{'http://www.freecodecamp.com/news/' + newsItem.storyLink.replace(' ', '-')}}">Discus</a></span>
+                </div>
+                <div class="col-lg-1 col-xs-2">
+                    <span class="news-discus"><a class="btn btn-primary" ng-href="{{'http://www.freecodecamp.com/news/' + newsItem.storyLink.replace(' ', '-')}}">Discus</a></span>
                 </div>
               </div>
-            </div>
-	  			</li>
-	  		</ul>
-  		</div>
+  	  			</li>
+  	  		</ul>
+    		</div>
+      </div>
   	</div>
 
     <!-- jQuery first, then Bootstrap JS. -->
